@@ -3,20 +3,11 @@ Projeto desenvolvido para desafio "Servless Challenge" utilizando NodeJS e AWS L
 
 ## Sequência para instalação de dependências:
 
-* 1 - Instalação serverless:
-*npm install serverless*
-
-* 2 - Credenciais serverless:
-*serverless config credentials --provider aws --key [access key] --secret [secret key] -o*
-
-* 3 - Criar um projeto serverless:
-*serverless*
-
-* 4 - instalar dependencias:
-*npm install*
-
-* 5 - instalar banco de dados:
-*npm i mysql --save*
+* 1 - Instalação serverless:   *npm install serverless*
+* 2 - Credenciais serverless:   *serverless config credentials --provider aws --key [access key] --secret [secret key] -o*
+* 3 - Criar um projeto serverless:   *serverless*
+* 4 - instalar dependencias:   *npm install*
+* 5 - instalar banco de dados:   *npm i mysql --save*
 
 ## Deploy da aplicação:
 
