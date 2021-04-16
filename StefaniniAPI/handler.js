@@ -5,8 +5,10 @@ const Tabelas = require('./src/framework/infraestrutura/tabelas')
 "use strict";
 
 module.exports.getFuncionarios = async (event) => {
+  const connection = conexao
+
   const p = new Promise((resolve) => {
-    conexao.query("SELECT * FROM funcionarios", function (err, results) {
+    connection.query("SELECT * FROM funcionarios", function (err, results) {
       resolve(results);
     });
   });
@@ -19,20 +21,25 @@ module.exports.getFuncionarios = async (event) => {
   };
 };
 
-/*const customExpress = require('./config/customExpress')
-const conexao = require('./infraestrutura/conexao')
-const Tabelas = require('./infraestrutura/tabelas')
+/*const customExpress = require("./src/application/config/customExpress");
+const conexao = require("./src/framework/infraestrutura/conexao");
+const Tabelas = require("./src/framework/infraestrutura/tabelas");
 
-conexao.connect(erro => {
-    if(erro) {
-        console.erro("Erro: Falha ao conectar", erro);
+("use strict");
+console.log(customExpress)
+
+module.exports.getFuncionarios = async (event) => {
+  conexao.connect((erro) => {
+    if (erro) {
+      console.log(erro);
     } else {
-        
-        Tabelas.init(conexao)
-        
-        const app = customExpress()
+      console.log("conectado com sucesso");
 
-        app.listen(3000, () => console.log('Servidor rodando na porta 3000'))
+      Tabelas.init(conexao);
+
+      const app = customExpress();
+
+      app.listen(3000, () => console.log("Servidor rodando na porta 3000"));
     }
-})*/
-
+  });
+};*/
