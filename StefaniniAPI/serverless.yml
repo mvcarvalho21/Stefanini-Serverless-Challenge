@@ -1,0 +1,29 @@
+service: stefaniniapi
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: sa-east-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - ec2:CreateNetworkInterface
+        - ec2:DescribeNetworkInterfaces
+        - ec2:DeleteNetworkInterfaces
+      Resource:
+        - "*"
+functions:
+  GetFuncionarios:
+    handler: handler.getFuncionarios
+    events:
+     - http:
+        path: /
+        method: get
+        cors: true
+    vpc:
+      securityGroupIds:
+        - sg-54436220
+      subnetIds:
+        - subnet-feef80b7
+        - subnet-d99af3bf
+        - subnet-0f1e6954
