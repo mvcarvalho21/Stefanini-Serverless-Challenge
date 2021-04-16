@@ -3,10 +3,10 @@ Projeto desenvolvido para desafio "Servless Challenge" utilizando NodeJS e AWS L
 
 ## Estrutura "Clean Architecture"
 
-* 1) enterprise - nessa pasta não foi inserida nenhum arquivo para regra de negócio.
-* 2) adapter - nessa pasta consta o arquivo funcionarios.js, utilizado para indicar os caminhos conforme verbos do database.
-* 3) application - nessa pasta constam as configurações de customExpress e a api de testes utilizando DynamoDB (em desenvolvimento)
-* 4) framework - essa estrutura engloba o modelo com as regras de requisições e infraestrutura do projeto, contendo a tabela do database e as regras para conexão com o mesmo.
+* 1 - enterprise: nessa pasta não foi inserido nenhum arquivo para regra de negócio.
+* 2 - adapter: nessa pasta consta o arquivo funcionarios.js, utilizado para indicar os caminhos conforme verbos do database.
+* 3 - application: nessa pasta constam as configurações de customExpress e a api de testes utilizando DynamoDB (em desenvolvimento)
+* 4 - framework: essa estrutura engloba o modelo com as regras de requisições e infraestrutura do projeto, contendo a tabela do database e as regras para conexão com o mesmo.
 
 ## Sequência para instalação de dependências:
 
